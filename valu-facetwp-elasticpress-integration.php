@@ -112,14 +112,13 @@ class Valu_FacetWP_ElasticPress_Integration {
 		/**
 		 * Filter the arguments for registering a new engine.
 		 *
-		 * @since 4.4.0
+		 * @since 0.1.0
 		 *
 		 * @param array $args Array of arguments for registering a new elasticpress engine.
 		 * @param string $engine_key Engine key.
 		 */
 		$args = apply_filters( 'register_facetwp_elasticpress_engine_args', $args, $engine_key );
 
-		// Args prefixed with an underscore are reserved for internal use.
 		$defaults = array(
 			'post_type'     => 'any',
 			'search_fields' => array(
@@ -163,13 +162,13 @@ class Valu_FacetWP_ElasticPress_Integration {
 		unset( $this->engines[ $engine_key ] );
 
 		/**
-		 * Fires after a post type was unregistered.
+		 * Fires after a search engine was deregistered.
 		 *
-		 * @since 4.5.0
+		 * @since 0.1.0
 		 *
-		 * @param string $post_type Post type key.
+		 * @param string $engine_key Search Engine key.
 		 */
-		do_action( 'unregistered_facetwp_elasticpress_engine', $engine_key );
+		do_action( 'deregistered_facetwp_elasticpress_engine', $engine_key );
 
 		return true;
 
@@ -196,7 +195,7 @@ class Valu_FacetWP_ElasticPress_Integration {
 
 	/**
 	 * Intercept search facets using ElasticPress engine
-	 * @since 2.1.5
+	 * @since 0.1.0
 	 */
 	function search_facet( $return, $params ) {
 
