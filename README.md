@@ -1,5 +1,5 @@
 # FacetWP ElasticPress integration
-This simple plugin adds ElasticPress support for FacetWP search facets. Plugin supports multiple "ElasticPress engines", which could have their own settings like "post_type" and "search_fields". Engine settings are be defined by using ElasticPress supported WP_Query arguments, when registering an new search engine.
+This simple plugin adds ElasticPress support for FacetWP search facets. Plugin supports multiple "ElasticPress engines", which could have their own settings like "post_type" and "search_fields". Engine settings are defined by using ElasticPress supported WP_Query arguments, when registering an new search engine.
 
 ## Requirements
 - Buy, install and configure [FacetWP](https://facetwp.com/)
