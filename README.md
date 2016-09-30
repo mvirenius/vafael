@@ -1,5 +1,5 @@
 # Valu FacetWP ElasticPress integration (VAFAEL)
-This simple plugin adds ElasticPress support for FacetWP.
+This simple plugin adds ElasticPress support for FacetWP search facets. Plugin supports multiple "ElasticPress engines", which could have their own settings like "post_type" and "search_fields". Engine settings are be defined by using ElasticPress supported WP_Query arguments, when registering an new search engine.
 
 ## Requirements
 - Buy, install and configure [FacetWP](https://facetwp.com/)
@@ -8,9 +8,24 @@ This simple plugin adds ElasticPress support for FacetWP.
 ## Installation
 - Clone or copy this repo into your plugins directory
 
+## Default search engine
+Default search engine searches all registered post types using ElasticPress' default search fields:
+
+```php
+$defaults = array(
+	'post_type'     => 'any',
+	'search_fields' => array(
+		'post_title',
+		'post_content',
+		'post_excerpt',
+		'taxonomies' => array( 'category', 'post_tag' ),
+	)
+);
+```
+
 ## Register new engines
 
-New search engines can be added by using register_engine -method.
+New search engines can be added by using register_engine -method in the "init" hook.
 The first parameter is the name of the engine and the second parameter accepts engine's WP_Query arguments.
 
 ```php
