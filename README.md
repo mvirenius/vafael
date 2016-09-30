@@ -2,8 +2,8 @@
 This simple plugin adds ElasticPress support for FacetWP.
 
 ## Requirements
-- Buy, install and configure FacetWP
-- Install and configure ElasticPress and Elasticsearch server
+- Buy, install and configure [FacetWP](https://facetwp.com/)
+- Install and configure [ElasticPress](https://github.com/10up/ElasticPress) and Elasticsearch server
 
 ## Installation
 - Clone or copy this repo into your plugins directory
