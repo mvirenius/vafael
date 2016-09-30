@@ -13,7 +13,8 @@ This simple plugin adds ElasticPress support for FacetWP.
 New search engines can be added by using register_engine -method.
 The first parameter is the name of the engine and the second parameter accepts engine's WP_Query arguments.
 
+```php
 add_action('init', function(){
 	VAFAEL()->register_engine( 'ElasticPress Page search', array( 'post_type' => 'page' ) );
 });
-
+```
