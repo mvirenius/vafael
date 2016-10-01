@@ -33,10 +33,10 @@ add_action('init', function(){
 	VAFAEL()->register_engine( 'ElasticPress Page search', array( 'post_type' => 'page' ) );
 });
 ```
+Registered ElasticPress engines are added to the search engine dropdown of the search facet.
 
 ## Usage
-Registered ElasticPress engines are added to the search engine dropdown of the search facet.
-- Add new search facet
+- Add a new search facet
 - Select "ElasticPress Default" or one of your custom engines as a search engine
 - Insert facet into your site
 - Enjoy a lightning fast search
